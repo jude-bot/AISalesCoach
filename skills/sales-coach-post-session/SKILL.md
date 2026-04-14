@@ -327,5 +327,7 @@ VAPI system prompt: [updated / not updated — note if VAPI API call succeeded o
 ## Reference Files
 
 - `references/report-content-guide.md` — detailed tone guidance, example sentences, what to say vs. avoid
-- `scripts/generate_coaching_report.py` — ReportLab generator for Evan's report
-- `scripts/generate_manager_summary.py` — ReportLab generator for Manager Summary
+- `references/sdt-coaching-framework.md` — SDT framework for motivation analysis and progression tracking
+- `references/stage-specific-evaluation.md` — pipeline stage evaluation criteria (for pipeline health section)
+- `skills/sales-coach-post-session/scripts/generate_coaching_report.py` — ReportLab generator for Evan's report
+- `skills/sales-coach-post-session/scripts/generate_manager_summary.py` — ReportLab generator for Manager Summary

@@ -193,5 +193,6 @@ Last week's commitments in brief: [yes / none — first session]
 
 ## Reference Files
 
-- `references/pre-session-brief-template.md` — exact format spec for the brief
-- `references/stage-specific-evaluation.md` — pipeline stage evaluation criteria
+- `references/pre-session-brief-template.md` — data gathering methodology + exact format spec for the brief
+- `references/stage-specific-evaluation.md` — pipeline stage evaluation criteria (all 6 stages)
+- `references/sdt-coaching-framework.md` — SDT framework for building the SDT Notes section of the brief

@@ -40,10 +40,10 @@ Monday–Wednesday (automated, hourly) — Post-Session Processing
 
 | File | Used By | Purpose |
 |------|---------|---------|
+| `references/pre-session-brief-template.md` | weekly-prep, post-session | Data gathering methodology + 11-section format spec |
+| `references/stage-specific-evaluation.md` | weekly-prep, post-session | Pipeline stage evaluation criteria (all 6 stages) |
+| `references/sdt-coaching-framework.md` | weekly-prep, post-session | SDT ladders, Kreek frameworks, session analysis |
 | `references/report-content-guide.md` | post-session | Tone rules and examples for both reports |
-| `references/sdt-coaching-framework.md` | post-session | Self-Determination Theory ladders and session analysis |
-| `references/pre-session-brief-template.md` | weekly-prep | Exact 11-section format spec for the brief |
-| `references/stage-specific-evaluation.md` | weekly-prep | Pipeline stage criteria, stale thresholds, red flags |
 
 ### Key Files in the Project Folder
 
