@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Sensitive / private files
+evan-personal-goals.md
+evan-profile.md
+outputs/
+archive/
+
+# Claude internal
+.claude/settings.local.json

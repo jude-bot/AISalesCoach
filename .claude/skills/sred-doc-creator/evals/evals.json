@@ -1,0 +1,23 @@
+{
+  "skill_name": "sred-doc-creator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a 2-page SRED.ca branded PDF report called 'Client Onboarding Summary' for a fictional client 'Maple Robotics'. Include: a cover page, a section with 3 KPIs (Assessment Score: 8.5, Estimated Credit: $120K, Timeline: 6 weeks), a table showing 4 project areas with columns Project, Hours, and Eligibility Status, and a section with 2 wins and 1 watch item. Save it to outputs/eval-onboarding.pdf",
+      "expected_output": "A professional branded PDF with SRED.ca colors (dark blue headers, lime green accent bar, emerald green win text), Anton headings, Lato body, properly wrapped table cells, no orphaned headers, KPI cards row.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Generate an SRED.ca branded PDF at outputs/eval-pipeline.pdf showing a pipeline review with a table that has 6 rows of deal data. Each row should have columns: Company, Stage, Value, Days in Stage, and Notes (make the Notes column contain long text like 'Waiting on CTO approval after technical discovery — follow-up scheduled for next Tuesday, need to confirm budget allocation & timeline with CFO'). Include a section header before the table and a coaching focus paragraph after it.",
+      "expected_output": "Table cells with long Notes text wrap properly within their cells (no overflow). Section header stays with the table (KeepTogether). Ampersands in notes render correctly.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Create a short SRED.ca branded PDF at outputs/eval-quarterly.pdf that tests page breaks: include 5 sections each with a header, a sub-header, a paragraph of body text (3-4 sentences each), and a small 3-row table. The content should be enough to span 3+ pages. Make sure no section header ever appears alone at the bottom of a page without its content.",
+      "expected_output": "Multi-page PDF where every section header stays with its content. No orphaned titles at page bottoms. Consistent branding throughout all pages.",
+      "files": []
+    }
+  ]
+}
