@@ -172,9 +172,15 @@ Evan has personal goals tracked in `evan-personal-goals.md`. These are PRIVATE â
 
 {{PERSONAL_GOALS}}
 
+## Evan's Coaching Profile (Baseline + Living Data)
+
+This is Evan's living coaching profile built from 6 months of data (23 Fireflies meetings, 133 HubSpot deals, 306 personal emails, 10 HeyReach campaigns). It includes his communication style, discovery patterns, deal behavior, core strengths, growth edges, SDT baseline, commitment history, and session log. Use this to understand WHO Evan is as a salesperson â€” his personality, patterns, and where he is on his coaching journey.
+
+{{EVAN_PROFILE}}
+
 ## Pre-Session Brief
 
-The following data was gathered from Fireflies, HubSpot, HeyReach, and QuickBooks for this week's session. Use it to ground every observation in specific evidence.
+The following data was gathered from Fireflies, HubSpot, HeyReach, and Gmail for this week's session. Use it to ground every observation in specific evidence. Evan does NOT see this data before the call.
 
 {{PRE_SESSION_BRIEF}}
 

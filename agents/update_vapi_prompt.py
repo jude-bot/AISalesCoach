@@ -36,6 +36,7 @@ MAX_TOKENS = 300
 # Paths (relative to project root)
 PROMPT_TEMPLATE = "agents/vapi-coaching-agent-prompt.md"
 DEFAULT_GOALS_FILE = "evan-personal-goals.md"
+DEFAULT_PROFILE_FILE = "evan-profile.md"
 
 
 def load_template(project_root: str) -> str:
@@ -53,15 +54,15 @@ def load_template(project_root: str) -> str:
     return prompt
 
 
-def inject_variables(template: str, brief: str, goals: str) -> str:
-    """Replace {{PRE_SESSION_BRIEF}} and {{PERSONAL_GOALS}} placeholders with actual data."""
+def inject_variables(template: str, brief: str, goals: str, profile: str) -> str:
+    """Replace {{PRE_SESSION_BRIEF}}, {{PERSONAL_GOALS}}, and {{EVAN_PROFILE}} placeholders."""
     result = template.replace("{{PRE_SESSION_BRIEF}}", brief)
     result = result.replace("{{PERSONAL_GOALS}}", goals)
+    result = result.replace("{{EVAN_PROFILE}}", profile)
     # Verify no placeholders remain
-    if "{{PRE_SESSION_BRIEF}}" in result:
-        raise ValueError("Failed to inject PRE_SESSION_BRIEF")
-    if "{{PERSONAL_GOALS}}" in result:
-        raise ValueError("Failed to inject PERSONAL_GOALS")
+    for var in ["{{PRE_SESSION_BRIEF}}", "{{PERSONAL_GOALS}}", "{{EVAN_PROFILE}}"]:
+        if var in result:
+            raise ValueError(f"Failed to inject {var}")
     return result
 
 
@@ -99,6 +100,7 @@ def main():
     parser = argparse.ArgumentParser(description="Update VAPI Sales Coach system prompt")
     parser.add_argument("--brief", required=True, help="Path to pre-session brief .txt file")
     parser.add_argument("--goals", default=None, help="Path to personal goals .md file (default: evan-personal-goals.md)")
+    parser.add_argument("--profile", default=None, help="Path to coaching profile .md file (default: evan-profile.md)")
     parser.add_argument("--dry-run", action="store_true", help="Print assembled prompt without calling API")
     args = parser.parse_args()
 
@@ -127,8 +129,13 @@ def main():
         goals = f.read()
     print(f"Goals loaded: {len(goals)} chars ({goals_path})")
 
+    profile_path = args.profile or os.path.join(project_root, DEFAULT_PROFILE_FILE)
+    with open(profile_path, "r") as f:
+        profile = f.read()
+    print(f"Profile loaded: {len(profile)} chars ({profile_path})")
+
     # Assemble
-    assembled = inject_variables(template, brief, goals)
+    assembled = inject_variables(template, brief, goals, profile)
     print(f"Assembled prompt: {len(assembled)} chars")
 
     if args.dry_run:
